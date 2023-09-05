@@ -1,0 +1,4 @@
+# Remove docker volumes, images, containers.
+docker volume rm $(docker volume ls  -q)
+docker rmi $(docker images -a -q) --force
+docker rm $(docker ps -qa)
