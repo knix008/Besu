@@ -1,0 +1,14 @@
+# For Node2, Node3, Node4
+curl -X POST --data '{"jsonrpc":"2.0","method":"admin_addPeer","params":["enode://7b9e7b450d8ef16e7253db65e3e5ab704fa9ba25944bcdd6ec84921e7177ce11b7b9efed43f5c6c832b5c1c8f11e2b545b0ca8896f27c869f9892dcf56a812e3@127.0.0.1:30303"],"id":1}' http://127.0.0.1:8546
+curl -X POST --data '{"jsonrpc":"2.0","method":"admin_addPeer","params":["enode://7b9e7b450d8ef16e7253db65e3e5ab704fa9ba25944bcdd6ec84921e7177ce11b7b9efed43f5c6c832b5c1c8f11e2b545b0ca8896f27c869f9892dcf56a812e3@127.0.0.1:30303"],"id":1}' http://127.0.0.1:8547
+curl -X POST --data '{"jsonrpc":"2.0","method":"admin_addPeer","params":["enode://7b9e7b450d8ef16e7253db65e3e5ab704fa9ba25944bcdd6ec84921e7177ce11b7b9efed43f5c6c832b5c1c8f11e2b545b0ca8896f27c869f9892dcf56a812e3@127.0.0.1:30303"],"id":1}' http://127.0.0.1:8548
+
+# For Node3, Node4
+curl -X POST --data '{"jsonrpc":"2.0","method":"admin_addPeer","params":["enode://1733bdc7694f493f699bc895a823e14c5a9043093321d0719f956c6ae92cc2ffbf1f62ef2c579931836b8d6942755fcc533d995198c2b53daeef70b423ba733f@127.0.0.1:30304"],"id":1}' http://127.0.0.1:8547
+curl -X POST --data '{"jsonrpc":"2.0","method":"admin_addPeer","params":["enode://1733bdc7694f493f699bc895a823e14c5a9043093321d0719f956c6ae92cc2ffbf1f62ef2c579931836b8d6942755fcc533d995198c2b53daeef70b423ba733f@127.0.0.1:30304"],"id":1}' http://127.0.0.1:8548
+
+# For Node4
+curl -X POST --data '{"jsonrpc":"2.0","method":"admin_addPeer","params":["enode://9c0e455d1d9a0a31747661d94a23799b12c41614fe9d86a4ba79b5075de5f923ab55bc24969c7cd8119b28b43d4dd5790383fd1ffeaf3575de56b6e8fedfa747@127.0.0.1:30305"],"id":1}' http://127.0.0.1:8548
+
+# Check peer count
+curl -X POST --data '{"jsonrpc":"2.0","method":"net_peerCount","params":[],"id":1}' localhost:8545
